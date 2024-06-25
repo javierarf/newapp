@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content>
+    <ion-card>
+        <ion-avatar slot="start">
+          <!--<img src="assets/img/avatar.png" alt="Avatar del usuario">-->
+        </ion-avatar>
+      <ion-card-content>
+        <ion-list>
+          <!--NOMBRE-->
+          <ion-item>
+            <ion-label position="stacked">Nombre</ion-label>
+            <ion-input [(ngModel)]="user.name" placeholder="Nombre"></ion-input>
+          </ion-item>
+          <!--CORREO-->
+          <ion-item>
+            <ion-label position="stacked">Correo Electrónico</ion-label>
+            <ion-input [(ngModel)]="user.email" type="email" placeholder="Correo Electrónico"></ion-input>
+          </ion-item>
+          <!--EDAD-->
+          <ion-item>
+            <ion-label position="stacked">Edad</ion-label>
+            <ion-input [(ngModel)]="user.edad" type="number" placeholder="Edad"></ion-input>
+          </ion-item>
+          <!--ALTURA-->
+          <ion-item>
+            <ion-label position="stacked">Altura(cm)</ion-label>
+            <ion-input [(ngModel)]="user.altura" type="number" placeholder="Altura"></ion-input>
+          </ion-item>
+          <!--PESO-->
+          <ion-item>
+            <ion-label position="stacked">Peso(kg)</ion-label>
+            <ion-input [(ngModel)]="user.peso" type="number" placeholder="Peso"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-button expand="block" (click)="saveProfile()">Guardar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  <!--<ion-button (click)="cerrar()">Cerrar sesión</ion-button>-->
+
